@@ -2,64 +2,60 @@ from unicodedata import name
 
 
 class Vehicle :
-    brand = ""
-    name  = ""
-    color = ""
-    capacity = ""
-    plate_number = ""
+   
     #methods
     def __init__(self, brand : str , name : str, color: str , capacity : str ,plate_number : str ) -> None:
-        self.brand = brand
-        self.name = name
-        self.color = color 
-        self.capacity = capacity
-        self.plate_number = plate_number
+        self.__brand = brand
+        self.__name = name
+        self.__color = color 
+        self.__capacity = capacity
+        self.__plate_number = plate_number
 
     def drive (self) :
-        print(f"the {self.name} is driving!")
+        print(f"the {self.__name} is driving!")
     
 
     def drift (self) : 
-      print (f"the {self.name} is drifting !!")
+      print (f"the {self.__name} is drifting !!")
 
     def carry_cargo(self):
-        print(f"the {self.name} is carrying cargo !!") 
+        print(f"the {self.__name} is carrying cargo !!") 
 
     def set_brand(self, brand):
-        self.brand = brand
+        self.__brand = brand
 
     def get_brand(self):
-        return f'the brand is: {self.brand}'
+        return f'the brand is: {self.__brand}'
 
     def set_name(self, name):
-        self.name = name
+        self.__name = name
 
     def get_name(self):
-        return f'the name is: {self.name}'
+        return f'the name is: {self.__name}'
 
     def set_color(self, color):
-        self.color = color
+        self.__color = color
 
     def get_color(self):
-        return f'the color is: {self.color}'
+        return f'the color is: {self.__color}'
 
     def set_capacity(self, capacity):
         self.capacity = capacity
 
     def get_capacity(self):
-        return f'the capacity is: {self.capacity}'
+        return f'the capacity is: {self.__capacity}'
 
     def set_plate_number(self, plate_number):
-        self.plate_number = plate_number
+        self.__plate_number = plate_number
 
     def get_plate_number(self):
-        return f'the plate_number is: {self.plate_number}'
+        return f'the plate_number is: {self.__plate_number}'
 
 # subclasses
 class Bus(Vehicle):
     
     def drive (self) :
-        print(f"the {self.name} is not driving!")
+        print(f"the bus is not driving!")
     
 
   
@@ -70,7 +66,7 @@ class Truck(Vehicle):
     
 
     def drift (self) : 
-      print (f"the {self.name} is not drifting !!")
+      print (f"the truck is not drifting !!")
 
     
 
