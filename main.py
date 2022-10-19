@@ -94,13 +94,13 @@ Vehicle2.drift()
 
 #Sub classes(#inheritance)
 bus_1 = Bus("Bus","GQ","White",25,"GFS 655","Student")
-Truck_1 = Truck("Truck","YU","White",3,"PLH 764","Cars")
+Truck_1 = Truck("Truck","YU","White",3,"PLH 764","Food")
 
 bus_1.drive()
-bus_1.setpassengers("Employee")
+bus_1.setpassengers("Human")
 bus_1.drive()
 
 
 Truck_1.carry_cargo()
-Truck_1.setcargo("Furniture")
+Truck_1.setcargo("Foodstuffs")
 Truck_1.carry_cargo()
