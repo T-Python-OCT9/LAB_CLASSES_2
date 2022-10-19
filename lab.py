@@ -50,7 +50,9 @@ class Vehicle:
 
 # subclasses
 class Bus(Vehicle):
-    pass
+    
+    def drift(self):
+        print(f"the {self.name} doesn't drift !!")
 
 class Truck(Vehicle):
     pass
