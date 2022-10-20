@@ -6,7 +6,7 @@ class Vehicle:
     # class attribute
     kind = "car"
 
-    def __init__(self, brand: str, name: str, color: str, capacity: str, plate_number: str) -> None:
+    def __init__(self, brand: str, name: str, color: str, capacity: int, plate_number: int) -> None:
         # initilizing the class
         # instance attributes / properties
         # private instance attribute
@@ -23,8 +23,7 @@ class Vehicle:
      # definig a setter for the private attribute for brand
 
     def setbrand(self, brand: str) -> str:
-        if not (isinstance(brand, str) and len(str(brand)) >= 5):
-            raise ValueError(" brand must be string and more 5 places")
+
         self.__brand = brand
 
         # define a getter for the private attribute
@@ -35,8 +34,7 @@ class Vehicle:
     # definig a setter for the private attribute for name
 
     def setname(self, name: str) -> str:
-        if not (isinstance(name, str) and len(str(name)) == 6):
-            raise ValueError(" name must be string and more 10 places")
+
         self.__name = name
 
      # define a getter for the private attribute
@@ -59,8 +57,7 @@ class Vehicle:
     # definig a setter for the private attribute for capacity
 
     def setcapacity(self, capacity: str) -> str:
-        if not (isinstance(capacity, str) and len(str(capacity)) >= 5):
-            raise ValueError(" capacity must be string and more 5 places")
+
         self.__capacity = capacity
 
         # define a getter for the private attribute capacity
@@ -81,35 +78,44 @@ class Vehicle:
         return self.__plate_number
 
     def drive(self) -> str:
-        return f"the {self.__name} is driving!"
+        return f"the {self.getname()} is driving!"
 
     def drifting(self) -> str:
-        return f"the {self.__name} is drifting !!"
+        return f"the {self.getname()} is drifting !!"
 
     def carry_cargo(self) -> str:
-        return f"the {self.__name} is carrying cargo !!"
+        return f"the {self.getname()} is carrying cargo !!"
 
 # inheritance
 
 
 class Bus(Vehicle):
     def drifting(self) -> str:
-        return f"the {self.getname()} is drifting !!"
+        return f"the {self.getname()} impossible to  drifting !!"
+
+    def carry_cargo(self) -> str:
+        return f"the {self.getname()} cannot  carrying cargo !!"
 
 
 class Truck(Vehicle):
     def carry_cargo(self) -> str:
         return f"the {self.getname()} is carrying cargo !!"
 
+    def drifting(self) -> str:
+        return f"the {self.getname()} impossible to  drifting !!"
 
-car1 = Vehicle("dvbsdf", "asdfsdf", "red ", "sdfgh", "1234567")
+
+car1 = Vehicle("mahindra", "jeeb", "red ", "sdfgh", "1234567")
 print(car1.drive())
 print(car1.drifting())
 print(car1.carry_cargo())
-
-car2 = Bus("BBBBB", "aJJJJJNNN", "red ", "sdfgh", "1234567")
+print("**************************************************************")
+car2 = Bus("ford2", "bus", "red ", "sdfgh", "1234567")
+print(car2.drive())
 print(car2.drifting())
-
-
-car3 = Truck("sdfgh", "sdcfvgbhj", "red ", "sdfghj", "1234567")
+print(car2.carry_cargo())
+print("**************************************************************")
+car3 = Truck("ford", "truck", "red ", "sdfghj", "1234567")
+print(car3.drive())
+print(car3.drifting())
 print(car3.carry_cargo())
