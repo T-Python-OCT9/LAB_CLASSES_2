@@ -1,71 +1,71 @@
 class Vehicle:
     def __init__(self,brand,name,color,capacity,plate_number) -> None:
-        self.brand = brand
-        self.name = name
-        self.color = color
-        self.capacity = capacity
-        self.plate_number = plate_number
+        self.__brand = brand
+        self.__name = name
+        self.__color = color
+        self.__capacity = capacity
+        self.__plate_number = plate_number
     
     def drive(self):
-        print(f"The vehicle name is: {self.name} driving")
+        print(f"The vehicle name is: {self.getname()} driving")
 
     def drift(self):
-        print(f"The vehicle\"{self.name}\" drifting !!")
+        print(f"The vehicle\"{self.getname()}\" drifting !!")
 
     def carry_cargo(self):
-        print(f"The vehicle\"{self.name}\" is carrying cargo !!")
+        print(f"The vehicle\"{self.getname()}\" is carrying cargo !!")
 
     #setter------------
     def setbrand(self, brand : str ):
-        self.brand = brand
+        self.__brand = brand
     
     def setname(self, name : str ):
-        self.name = name    
+        self.__name = name    
 
     def setcolor(self, color : str ):
-        self.color = color
+        self.__color = color
 
     def setcapacity(self, capacity : str ):
-        self.capacity = capacity 
+        self.__capacity = capacity 
 
     def setcapacity(self, capacity : str ):
-        self.capacity = capacity
+        self.__capacity = capacity
 
     def setplate_number(self, plate_number : str ):
-        self.plate_number = plate_number
+        self.__plate_number = plate_number
 
 
     #getter-------------  
     def getbrand(self):
-        return self.brand 
+        return self.__brand 
     
     def getname(self):
-        return self.name
+        return self.__name
     
     def getcolor(self):
-        return self.color
+        return self.__color
     
     def getcapacity(self):
-        return self.capacity
+        return self.__capacity
      
     def getplate_number(self):
-        return self.plate_number
+        return self.__plate_number
     
 
 
 class Bus(Vehicle):
     def __init__(self, brand, name, color, capacity, plate_number,passengers) -> None:
         super().__init__(brand, name, color, capacity, plate_number)
-        self.passengers = passengers
+        self.__passengers = passengers
     
     def setpassengers(self, passengers : str ):
-        self.passengers = passengers
+        self.__passengers = passengers
   
     def getpassengers(self):
-        return self.passengers 
+        return self.__passengers 
 
     def drive(self):
-        print(f"The Bus name is: {self.name} driving for {self.passengers}")
+        print(f"The Bus name is: {self.getname()} driving for {self.getpassengers()}")
 
 
 
@@ -86,10 +86,10 @@ class Truck(Vehicle):
         print(f"The Truck name is: {self.name} driving")
 
     def drift(self):
-        print(f"The Truck\"{self.name}\" drifting !!")
+        print(f"The Truck\"{self.getname()}\" drifting !!")
 
     def carry_cargo(self):
-        print(f"The Truck\"{self.name}\" is carrying {self.cargo} !!")
+        print(f"The Truck\"{self.getname()}\" is carrying {self.getcargo()} !!")
 
 
 Vehicle1 = Vehicle("BMW","Mazda","Black",5,"ASD 123")
