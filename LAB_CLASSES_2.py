@@ -79,13 +79,13 @@ class Vehicle :
     def setcapacity(self , capacity ):
         self.__capacity = capacity
 
-    def getcolor (self):
+    def getcapacity (self):
         return self.__capacity
 
     def setplate_number (self , plate_number ):
         self.__plate_number = plate_number
 
-    def getcolor (self):
+    def getplate_number (self):
         return self.__plate_number
 
 
@@ -116,13 +116,13 @@ class Truck(Vehicle):
 
 ''' 
 Vehi1= Vehicle("jeep ", "G1", "black ", "10", "DSQ 2256") 
-print(Vehi1.getbran() , Vehi1.getname())
+print(Vehi1.getbran() , Vehi1.getname() , Vehi1.getcolor() , Vehi1.getcapacity(), Vehi1.getplate_number())
 print("  ")
 bus1= Bus("nissan" , "B20", "gray", "200", "ACU 4479", "Street 20 ")
 print("bath for bus is ", bus1.PathNUm_bus)
 print("  ")
 truck1 =Truck("nissan", "T40", "white", "300", "SSD 5028", "street 89")
-print(truck1.PathNUm_truck)
+print("bath for bus istruck1",truck1.PathNUm_truck)
 print("  ")
 
 print(Vehi1.carry_cargo())
