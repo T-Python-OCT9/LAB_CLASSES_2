@@ -38,7 +38,7 @@ class Vehicle:
         self._brand = brand
     #2------Name---------
     def getName(self):
-        return self._brand
+        return self._name
 
     def setNAme(self , name : str):
         if not (isinstance(name , str)):
@@ -110,39 +110,77 @@ Truck1 = Truck("Volvo" , "Truck" , "Gray" , "3" , 4567 ,"Truck Path")
 
 #call all the methods on each object. 
 print("-----------------------------------------")
-print(Car1._name)
-print(Car1.drive())
-print(Car1.drift())
-print(Car1.carry_cargo())
-Car1.setBrand("Some Brand")
-print(Car1.getBrand())
-Car1.setPlate(4673)
-print(Car1.getPlate())
-Car1.setCapacity(60)
-print(Car1.getCapacity())
+#accessing the instance attributes
+print(f"Vehicle brand: {Car1._brand} | Vehicle name : {Car1._name} | Color:  {Car1._color} | Capacity : {Car1._capacity} | Palte Number: {Car1._plate_number}")
+Car1.drive()
+Car1.drift()
+Car1.carry_cargo()
+Car1.setNAme("New Car")
+print(Car1.getName())
+#after modify car name
+Car1.drive()
+
+# print(Car1._name)
+# print(Car1.drive())
+# print(Car1.drift())
+# print(Car1.carry_cargo())
+# Car1.setNAme("New CAR")
+# print(Car1.getName())
+# Car1.setBrand("Some Brand")
+# print(Car1.getBrand())
+# Car1.setPlate(4673)
+# print(Car1.getPlate())
+# Car1.setCapacity(60)
+# print(Car1.getCapacity())
 
 print("-----------------------------------------")
-print(Bus1._name)
-print(Bus1.drive())
-print(Bus1.drift())
-print(Bus1.carry_cargo())
-Bus1.setBrand("Some Brand2")
-print(Bus1.getBrand())
-Bus1.setPlate(4673)
-print(Bus1.getPlate())
+#accessing the instance attributes
+print(f"Vehicle brand: {Bus1._brand} | Vehicle name : {Bus1._name} | Color:  {Bus1._color} | Capacity : {Bus1._capacity} | Palte Number: {Bus1._plate_number}")
+Bus1.drive()
+Bus1.drift()
+Bus1.carry_cargo()
+Bus1.setNAme("New Bus")
+print(Bus1.getName())
+#after modify car name
+Bus1.drift()
+
 Bus1.setCapacity(70)
 print(Bus1.getCapacity())
 print(Bus1.BusDetails())
 
+# print(Bus1._name)
+# print(Bus1.drive())
+# print(Bus1.drift())
+# print(Bus1.carry_cargo())
+# Bus1.setBrand("Some Brand2")
+# print(Bus1.getBrand())
+# Bus1.setPlate(4673)
+# print(Bus1.getPlate())
+
+
 print("-----------------------------------------")
-print(Truck1._name)
-print(Truck1.drive())
-print(Truck1.drift())
-print(Truck1.carry_cargo())
-Truck1.setBrand("Some Brand3")
-print(Truck1.getBrand())
-Truck1.setPlate(4642)
-print(Truck1.getPlate())
+#accessing the instance attributes
+print(f"Vehicle brand: {Truck1._brand} | Vehicle name : {Truck1._name} | Color:  {Truck1._color} | Capacity : {Truck1._capacity} | Palte Number: {Truck1._plate_number}")
+Truck1.drive()
+Truck1.drift()
+Truck1.carry_cargo()
+Truck1.setNAme("New truck")
+print(Truck1.getName())
+#after modify car name
+Truck1.drift()
+
 Truck1.setCapacity(90)
 print(Truck1.getCapacity())
 print(Truck1.TruckDetails())
+
+# print(Truck1._name)
+# print(Truck1.drive())
+# print(Truck1.drift())
+# print(Truck1.carry_cargo())
+# Truck1.setBrand("Some Brand3")
+# print(Truck1.getBrand())
+# Truck1.setPlate(4642)
+# print(Truck1.getPlate())
+# Truck1.setCapacity(90)
+# print(Truck1.getCapacity())
+# print(Truck1.TruckDetails())
